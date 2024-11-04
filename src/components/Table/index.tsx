@@ -1,28 +1,24 @@
 import "./style.css";
-import { useState } from "react";
-import tableData1 from "./data/index.json"
-import { TableBody, TableHead } from "./components";
-import {IColumns} from "./components/TableHead.tsx";
+import { TableHead } from "./components";
+import {LabelType, OrderType, ValueType} from "./types.ts";
 
 
-const Table = () => {
-    const [tableData, setTableData] = useState(tableData1);
+type PropsType = {
+    values: ValueType[];
+    labels: LabelType[];
+    orderObj: OrderType;
+};
 
-    const columns: IColumns[] = [
-        { label: "Full Name", accessor: "full_name" },
-        { label: "Email", accessor: "email" },
-        { label: "Gender", accessor: "gender" },
-        { label: "Age", accessor: "age" },
-        { label: "Start date", accessor: "start_date" },
-    ];
+
+const Table = ({ labels, values, orderObj }: PropsType) => {
 
     return (
         <table className="table">
             <caption>
                 Developers currently enrolled in this course, column headers are sortable.
             </caption>
-            <TableHead columns={columns} />
-            <TableBody columns={columns} tableData={tableData}/>
+            <TableHead labels={labels} orderObj={orderObj} />
+            {/*<TableBody columns={columns} tableData={tableData}/>*/}
         </table>
 
     );

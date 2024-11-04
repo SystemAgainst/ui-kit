@@ -4,10 +4,11 @@ import styles from "../style/style.module.css";
 
 
 type TableHeadCellProps = {
-    active?: boolean;
     direction?: 'asc' | 'desc';
-    sortable?: boolean;
     children?: ReactNode;
+    onClick?: () => void;
+    active?: boolean;
+    sortable?: boolean;
 };
 
 const TableHeadCell: React.FC<TableHeadCellProps> = ({ active, direction, sortable, children }) => {
