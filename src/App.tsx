@@ -1,5 +1,6 @@
 import './App.css';
 import Accordion from "./components/Accordion/Accordion.tsx";
+import Table from "./components/Table";
 
 
 function App() {
@@ -60,6 +61,11 @@ function App() {
   return (
     <div className="container">
         <Accordion items={accordionItems} />
+        <div></div>
+        <div className="table_container">
+            <h1>Sortable table with React</h1>
+            <Table/>
+        </div>
     </div>
   )
 }

@@ -1,0 +1,65 @@
+.table {
+    width: 100%;
+}
+
+.table-body {
+    display: block;
+    height: 200px;
+    overflow: auto;
+}
+
+.table-head {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.table-row {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.table-cell {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    padding: 12px;
+    vertical-align: middle;
+    text-align: center;
+    border-bottom: 1px solid #000;
+}
+
+.table-head-cell {
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+.table-head-cell.active {
+    opacity: 1;
+}
+
+.table-head-cell.sortable {
+    cursor: pointer;
+}
+
+.table-head-cell.sortable:hover .arrow-button {
+    opacity: 0.5;
+}
+
+.table-head-cell.active .arrow-button {
+    opacity: 1;
+}
+
+.table-head-cell.active.asc .arrow-button {
+    transform: rotate(180deg);
+}
+
+.arrow-button {
+    position: relative;
+    left: -10px;
+    margin-left: -24px;
+    opacity: 0;
+    transition: 0.2s;
+}
