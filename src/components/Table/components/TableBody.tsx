@@ -18,7 +18,7 @@ const TableBody = ({ labels, values }: PropsType) => {
                     <tr className={styles["table-row"]} key={value.id || index}>
                         {labels.map(label => (
                             <td className={styles["table-cell"]} key={label.value}>
-                                {value[label.value]}
+                                {label.value ? value[label.value] : ""}
                             </td>
                         ))}
                     </tr>
