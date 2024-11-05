@@ -1,35 +1,30 @@
-type TableBodyProps = {
-    tableData: IData[];
-    columns: IColumns[];
-}
+import {LabelType, ValueType} from "../types.ts";
+import styles from "../style/style.module.css"
 
-interface IColumns {
-    label: string;
-    accessor: keyof IData;
-}
 
-interface IData {
-    id: number;
-    "full_name": string;
-    email: string;
-    gender: string;
-    age: number;
-    "start_date": string;
-}
+type PropsType = {
+    labels: LabelType[];
+    values: ValueType[];
+};
 
-const TableBody = ({ tableData, columns }: TableBodyProps) => {
+const TableBody = ({ labels, values }: PropsType) => {
     return (
-        <tbody>
-        {tableData.map((data) => {
-            return (
-                <tr key={data.id}>
-                    {columns.map(({ accessor }) => {
-                        const tData = data[accessor] ? data[accessor] : "——";
-                        return <td key={accessor}>{tData}</td>;
-                    })}
-                </tr>
-            );
-        })}
+        <tbody className={styles["table-body"]}>
+        {
+            values.map((value, index) => {
+                return (
+                    // TableBody.tsx:11 Warning: Each child in a list should have a unique "key" prop.
+                    // Check the render method of `TableBody => index
+                    <tr className={styles["table-row"]} key={value.id || index}>
+                        {labels.map(label => (
+                            <td className={styles["table-cell"]} key={label.value}>
+                                {value[label.value]}
+                            </td>
+                        ))}
+                    </tr>
+                )
+            })
+        }
         </tbody>
     );
 };

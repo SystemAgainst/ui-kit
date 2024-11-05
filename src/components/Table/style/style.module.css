@@ -1,5 +1,15 @@
 .table {
     width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse; /* Предотвращает двойные границы */
+}
+
+/* Обертка для скролла по x и y */
+.table_container {
+    max-width: 750px;
+    max-height: 500px;
+    margin: 0 auto;
+    overflow: auto;
 }
 
 .table-body {
@@ -8,12 +18,7 @@
     overflow: auto;
 }
 
-.table-head {
-    display: table;
-    width: 100%;
-    table-layout: fixed;
-}
-
+.table-head,
 .table-row {
     display: table;
     width: 100%;
@@ -54,12 +59,4 @@
 
 .table-head-cell.active.asc .arrow-button {
     transform: rotate(180deg);
-}
-
-.arrow-button {
-    position: relative;
-    left: -10px;
-    margin-left: -24px;
-    opacity: 0;
-    transition: 0.2s;
 }

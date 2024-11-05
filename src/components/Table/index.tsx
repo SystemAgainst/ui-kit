@@ -1,5 +1,5 @@
-import "./style.css";
-import { TableHead } from "./components";
+import styles from "./style/style.module.css";
+import {TableBody, TableHead} from "./components";
 import {LabelType, OrderType, ValueType} from "./types.ts";
 
 
@@ -13,12 +13,9 @@ type PropsType = {
 const Table = ({ labels, values, orderObj }: PropsType) => {
 
     return (
-        <table className="table">
-            <caption>
-                Developers currently enrolled in this course, column headers are sortable.
-            </caption>
+        <table className={styles.name}>
             <TableHead labels={labels} orderObj={orderObj} />
-            {/*<TableBody columns={columns} tableData={tableData}/>*/}
+            <TableBody values={values} labels={labels} />
         </table>
 
     );

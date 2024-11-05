@@ -27,10 +27,11 @@ const TableHead = ({ labels, orderObj }: PropsType) => {
     };
 
     return (
-        <thead className={styles.tableHead}>
-            <tr className={styles.tableRow}>
+        <thead className={styles["table-head"]}>
+            <tr className={styles["table-row"]}>
                 {labels.map((label) => (
                     <TableHeadCell
+                        className={styles["table-cell"]}
                         key={label.value}
                         sortable={!label.noSort}
                         active={orderObj.orderBy === label.value}
