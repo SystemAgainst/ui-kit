@@ -1,3 +1,7 @@
+import down_arrow from "./images/down_arrow.png";
+import defaultPng from "./images/default.png";
+
+
 export const accordionItems = [
     {
         title: 'Accordion Item #1',
@@ -15,6 +19,9 @@ export const accordionItems = [
                 </ul>
             </div>
         ),
+        expandIcon: defaultPng,  // Путь к иконке
+        defaultExpanded: true,
+        expanded: true, // Иконка справа
     },
     {
         title: 'Accordion Item #2',
@@ -32,6 +39,9 @@ export const accordionItems = [
                 </ul>
             </div>
         ),
+        expandIcon: down_arrow,  // Путь к иконке
+        defaultExpanded: true,
+        expanded: false,
     },
     {
         title: 'Accordion Item #3',
@@ -49,5 +59,8 @@ export const accordionItems = [
                 </ul>
             </div>
         ),
+        expandIcon: down_arrow,  // Путь к иконке
+        defaultExpanded: false,
+        expanded: false,
     },
 ];

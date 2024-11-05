@@ -5,10 +5,10 @@ import "./Accordion.css";
 
 
 const Accordion: FC<{ items: Array<AccordionData>; }> = ({items}) => {
-    const [currentIdx, setCurrentIdx] = useState(-1);
+    const [currentIdx, setCurrentIdx] = useState<number | null>(null);
 
     const handleClick = (index: number) => {
-        setCurrentIdx((currentValue) => (currentValue !== index ? index : -1));
+        setCurrentIdx((currentValue) => (currentValue !== index ? index : null));
     };
 
     return (
