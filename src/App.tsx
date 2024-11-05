@@ -1,65 +1,19 @@
 import './App.css';
 import Accordion from "./components/Accordion/Accordion.tsx";
+import Table from "./components/Table";
+import MockData from "./components/Table/data/mock.data.ts";
+import { accordionItems } from "./components/Accordion/mock.data.tsx";
+import styles from "./components/Table/style/style.module.css";
 
 
 function App() {
-    const accordionItems = [
-        {
-            title: 'Accordion Item #1',
-            content: (
-                <div>
-                    <strong>This is the first item's accordion body.</strong> It is hidden
-                    by default, but shown when the title is clicked. It will also be
-                    hidden if the title is clicked again or when another item is clicked.
-                    You can pass HTML tags in the content such as <u>underline tag</u>,{' '}
-                    <i>italic</i>, or even another list like this:
-                    <ul>
-                        <li>Bread</li>
-                        <li>Eggs</li>
-                        <li>Milk</li>
-                    </ul>
-                </div>
-            ),
-        },
-        {
-            title: 'Accordion Item #2',
-            content: (
-                <div>
-                    <strong>This is the second item's accordion body.</strong> It is
-                    hidden by default, but shown when the title is clicked. It will also
-                    be hidden if the title is clicked again or when another item is
-                    clicked. You can pass HTML tags in the content such as{' '}
-                    <u>underline tag</u>, <i>italic</i>, or even another list like this:
-                    <ul>
-                        <li>Bread</li>
-                        <li>Eggs</li>
-                        <li>Milk</li>
-                    </ul>
-                </div>
-            ),
-        },
-        {
-            title: 'Accordion Item #3',
-            content: (
-                <div>
-                    <strong>This is the third item's accordion body.</strong> It is hidden
-                    by default, but shown when the title is clicked. It will also be
-                    hidden if the title is clicked again or when another item is clicked.
-                    You can pass HTML tags in the content such as <u>underline tag</u>,{' '}
-                    <i>italic</i>, or even another list like this:
-                    <ul>
-                        <li>Bread</li>
-                        <li>Eggs</li>
-                        <li>Milk</li>
-                    </ul>
-                </div>
-            ),
-        },
-    ];
-
   return (
     <div className="container">
         <Accordion items={accordionItems} />
+        <div></div>
+        <div className={styles["table-container"]}>
+            <Table labels={MockData.labels} orderObj={MockData.orderObj} values={MockData.values} />
+        </div>
     </div>
   )
 }

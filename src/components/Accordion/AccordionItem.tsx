@@ -17,25 +17,38 @@ const AccordionItem :FC<AccordionItemProps> = ({
 
     const [height, setHeight] = useState<number>(0);
 
+    const [isExpanded, setIsExpanded] = useState<boolean>(data?.defaultExpanded || false);
+
     useEffect(() => {
-        if (!isOpen) {
+        if (!isExpanded) {
             setHeight(0);
         } else {
             const contentEl = contentRef.current as HTMLDivElement;
 
             setHeight(contentEl.scrollHeight);
         }
-    }, [isOpen]);
+    }, [isExpanded]);
 
+    const handleClick = () => {
+        setIsExpanded((prev) => !prev);
+        if (onClick) onClick();
+    };
 
     return (
         <li className={`accordion-item ${isOpen ? 'active' : ''}`}>
             <h2 className="accordion-item-title">
                 <button
                     className="accordion-item-btn"
-                    onClick={onClick}
+                    onClick={handleClick}
+                    style={{ justifyContent: data?.expanded ? 'space-between' : 'flex-start' }}
                 >
+                    {!data?.expanded && data?.expandIcon && (
+                        <img src={data.expandIcon} alt="expand icon" className="accordion-icon" />
+                    )}
                     {data?.title}
+                    {data?.expanded && data?.expandIcon && (
+                        <img src={data.expandIcon} alt="expand icon" className="accordion-icon" />
+                    )}
                 </button>
             </h2>
             <div className="accordion-item-container" style={{ height }}>
