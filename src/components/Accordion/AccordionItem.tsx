@@ -1,66 +1,49 @@
-import { AccordionData } from './types';
-import {FC, useEffect, useRef, useState} from "react";
-
+import { FC, useState } from 'react'
+import './Accordion.css'
+import { AccordionData } from './types'
 
 interface AccordionItemProps {
-    data?: AccordionData;
-    isOpen?: boolean;
-    onClick?: () => void;
+	data?: AccordionData
+	isOpen?: boolean
+	onClick?: () => void
 }
 
-const AccordionItem :FC<AccordionItemProps> = ({
-  data,
-  isOpen,
-  onClick,
-}) => {
-    const contentRef = useRef<HTMLDivElement>(null);
+const AccordionItem: FC<AccordionItemProps> = ({ data, isOpen, onClick }) => {
+	const [isExpanded, setIsExpanded] = useState<boolean>(data?.defaultExpanded || false)
 
-    const [height, setHeight] = useState<number>(0);
+	const handleClick = () => {
+		setIsExpanded(prev => !prev)
+		if (onClick) onClick()
+	}
 
-    const [isExpanded, setIsExpanded] = useState<boolean>(data?.defaultExpanded || false);
+	const getContainerStyle = () => ({
+		maxHeight: isExpanded ? '100vh' : '0px',
+		overflow: 'hidden',
+		transition: 'max-height 0.3s ease',
+	})
 
-    useEffect(() => {
-        if (!isExpanded) {
-            setHeight(0);
-        } else {
-            const contentEl = contentRef.current as HTMLDivElement;
-
-            setHeight(contentEl.scrollHeight);
-        }
-    }, [isExpanded]);
-
-    const handleClick = () => {
-        setIsExpanded((prev) => !prev);
-        if (onClick) onClick();
-    };
-
-    return (
-        <li className={`accordion-item ${isOpen ? 'active' : ''}`}>
-            <h2 className="accordion-item-title">
-                <button
-                    className="accordion-item-btn"
-                    onClick={handleClick}
-                    style={{ justifyContent: data?.expanded ? 'space-between' : 'flex-start' }}
-                >
-                    {!data?.expanded && data?.expandIcon && (
-                        <img src={data.expandIcon} alt="expand icon" className="accordion-icon" />
-                    )}
-                    {data?.title}
-                    {data?.expanded && data?.expandIcon && (
-                        <img src={data.expandIcon} alt="expand icon" className="accordion-icon" />
-                    )}
-                </button>
-            </h2>
-            <div className="accordion-item-container" style={{ height }}>
-                <div
-                    ref={contentRef}
-                    className="accordion-item-content"
-                >
-                    {data?.content}
-                </div>
-            </div>
-        </li>
-    );
+	return (
+		<li className={`accordion-item ${isOpen ? 'active' : ''}`}>
+			<h2 className='accordion-item-title'>
+				<button
+					className='accordion-item-btn'
+					onClick={handleClick}
+					style={{ justifyContent: data?.expanded ? 'space-between' : 'flex-start' }}
+				>
+					{!data?.expanded && data?.expandIcon && (
+						<img src={data.expandIcon} alt='expand icon' className='accordion-icon' />
+					)}
+					{data?.title}
+					{data?.expanded && data?.expandIcon && (
+						<img src={data.expandIcon} alt='expand icon' className='accordion-icon' />
+					)}
+				</button>
+			</h2>
+			<div className='accordion-item-container' style={getContainerStyle()}>
+				<div className='accordion-item-content'>{data?.content}</div>
+			</div>
+		</li>
+	)
 }
 
-export default AccordionItem;
+export default AccordionItem
