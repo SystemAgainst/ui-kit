@@ -1,0 +1,217 @@
+/* Typography.module.css */
+
+/* Display Styles */
+.displayLarge {
+	font-family: 'Myriad Pro';
+	font-size: 52px;
+	line-height: 56px;
+	letter-spacing: -0.01em;
+}
+
+.displaySmall {
+	font-family: 'Myriad Pro';
+	font-size: 44px;
+	line-height: 48px;
+	letter-spacing: -0.01em;
+}
+
+/* Heading Styles */
+.heading1 {
+	font-family: 'Myriad Pro';
+	font-size: 40px;
+	line-height: 48px;
+	letter-spacing: -0.01em;
+}
+
+.heading2 {
+	font-family: 'Myriad Pro';
+	font-size: 36px;
+	line-height: 44px;
+	letter-spacing: -0.01em;
+}
+
+.heading3 {
+	font-family: 'Myriad Pro';
+	font-size: 32px;
+	line-height: 40px;
+	letter-spacing: -0.01em;
+}
+
+.heading4 {
+	font-family: 'Myriad Pro';
+	font-size: 28px;
+	line-height: 36px;
+}
+
+.heading5 {
+	font-family: 'Myriad Pro';
+	font-size: 24px;
+	line-height: 32px;
+}
+
+.heading6 {
+	font-family: 'Myriad Pro';
+	font-size: 20px;
+	line-height: 28px;
+}
+
+.heading7 {
+	font-family: 'Myriad Pro';
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.heading8 {
+	font-family: 'Myriad Pro';
+	font-size: 16px;
+	line-height: 22px;
+}
+
+.heading9 {
+	font-family: 'Myriad Pro';
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.heading10 {
+	font-family: 'Myriad Pro';
+	font-size: 12px;
+	line-height: 18px;
+}
+
+/* Subtitle Styles */
+.subtitle1 {
+	font-family: 'VisueltPro';
+	font-size: 28px;
+	line-height: 36px;
+}
+
+.subtitle2 {
+	font-family: 'VisueltPro';
+	font-size: 24px;
+	line-height: 32px;
+}
+
+.subtitle3 {
+	font-family: 'VisueltPro';
+	font-size: 20px;
+	line-height: 28px;
+}
+
+.subtitle4 {
+	font-family: 'VisueltPro';
+	font-size: 16px;
+	line-height: 24px;
+}
+
+/* Body Styles */
+.body1 {
+	font-family: 'VisueltPro';
+	font-size: 28px;
+	line-height: 36px;
+}
+
+.body2 {
+	font-family: 'VisueltPro';
+	font-size: 24px;
+	line-height: 32px;
+}
+
+.body3 {
+	font-family: 'VisueltPro';
+	font-size: 20px;
+	line-height: 28px;
+}
+
+.body4 {
+	font-family: 'VisueltPro';
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.body5 {
+	font-family: 'VisueltPro';
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.body6 {
+	font-family: 'VisueltPro';
+	font-size: 12px;
+	line-height: 16px;
+}
+
+/* Caption Styles */
+.caption1 {
+	font-family: 'VisueltPro';
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.caption2 {
+	font-family: 'VisueltPro';
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.caption3 {
+	font-family: 'VisueltPro';
+	font-size: 12px;
+	line-height: 16px;
+}
+
+/* Button Styles */
+.button1 {
+	font-family: 'VisueltPro';
+	font-size: 28px;
+	line-height: 36px;
+}
+
+.button2 {
+	font-family: 'VisueltPro';
+	font-size: 24px;
+	line-height: 32px;
+}
+
+.button3 {
+	font-family: 'VisueltPro';
+	font-size: 20px;
+	line-height: 28px;
+}
+
+.button4 {
+	font-family: 'VisueltPro';
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.button5 {
+	font-family: 'VisueltPro';
+	font-size: 14px;
+	line-height: 22px;
+}
+
+/* Paragraph Styles */
+.paragraph1 {
+	font-family: 'VisueltPro';
+	font-size: 24px;
+	line-height: 32px;
+}
+
+.paragraph2 {
+	font-family: 'VisueltPro';
+	font-size: 20px;
+	line-height: 28px;
+}
+
+.paragraph3 {
+	font-family: 'VisueltPro';
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.paragraph4 {
+	font-family: 'VisueltPro';
+	font-size: 14px;
+	line-height: 18px;
+}
