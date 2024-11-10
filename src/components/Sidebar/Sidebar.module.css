@@ -1,0 +1,23 @@
+.sidebar a {
+	text-decoration: none;
+	color: black;
+	display: block;
+	padding: 8px;
+}
+
+.sidebar a:hover {
+	background-color: #e0e0e0;
+}
+
+.pagination {
+	display: flex;
+	justify-content: center;
+	gap: 8px;
+	margin: 20px 0;
+}
+
+button.active {
+	font-weight: bold;
+	background-color: #007bff;
+	color: white;
+}

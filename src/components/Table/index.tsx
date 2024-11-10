@@ -1,24 +1,20 @@
-import styles from "./style/style.module.css";
-import {TableBody, TableHead} from "./components";
-import {LabelType, OrderType, ValueType} from "./types.ts";
-
+import { TableBody, TableHead } from './components'
+import styles from './style/style.module.css'
+import { LabelType, OrderType, ValueType } from './types.ts'
 
 type PropsType = {
-    values: ValueType[];
-    labels: LabelType[];
-    orderObj: OrderType;
-};
-
+	values?: ValueType[]
+	labels?: LabelType[]
+	orderObj?: OrderType
+}
 
 const Table = ({ labels, values, orderObj }: PropsType) => {
+	return (
+		<table className={styles.name}>
+			<TableHead labels={labels} orderObj={orderObj} />
+			<TableBody values={values} labels={labels} />
+		</table>
+	)
+}
 
-    return (
-        <table className={styles.name}>
-            <TableHead labels={labels} orderObj={orderObj} />
-            <TableBody values={values} labels={labels} />
-        </table>
-
-    );
-};
-
-export default Table;
+export default Table
