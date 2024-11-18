@@ -12,12 +12,12 @@ export type ToggleButtonProps<T = unknown> = CommonToggleButtonProps<T> & {
 	onChange?: (value: T | null) => void;
 };
 
-export type MultiToggleButtonProps<T = unknown> = CommonToggleButtonProps<T> & {
+export type MultiToggleButtonGroupProps<T = unknown> = CommonToggleButtonGroupProps<T> & {
 	value: T[];
 	onChange?: (value: T[]) => void;
 };
 
-export type Option<T = unknown> = {
+export type ToggleButton<T = unknown> = {
 	id?: string;
 	testId?: string;
 	label: string;
@@ -32,12 +32,12 @@ export type Option<T = unknown> = {
 	disabled?: boolean;
 };
 
-export type CommonToggleButtonProps<T = unknown> = {
+export type CommonToggleButtonGroupProps<T = unknown> = {
 	testId?: string;
 	className?: string;
 	variant?: ToggleButtonVariants;
 	size?: ToggleButtonSizes;
-	options: Option<T>[];
+	options: ToggleButton<T>[];
 	onBlur?: FocusEventHandler;
 	onMouseEnter?: (event: MouseEvent<HTMLButtonElement>) => void;
 	onMouseLeave?: (event: MouseEvent<HTMLButtonElement>) => void;
