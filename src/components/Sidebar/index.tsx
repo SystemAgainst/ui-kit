@@ -14,6 +14,9 @@ const Sidebar: React.FC = () => {
 				<li>
 					<Link to='/typography'>Typography</Link>
 				</li>
+				<li>
+					<Link to='/toggle-button'>Toggle Button</Link>
+				</li>
 			</ul>
 		</nav>
 	)
