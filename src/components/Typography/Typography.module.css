@@ -1,57 +1,217 @@
-.default-font {
-	font-size: 14px;
-	line-height: 130%;
-	font-weight: normal;
+/* Typography.module.css */
+
+/* Display Styles */
+.displayLarge {
+	font-family: 'Myriad Pro';
+	font-size: 52px;
+	line-height: 56px;
+	letter-spacing: -0.01em;
 }
 
-.bold-font {
-	font-weight: bold;
+.displaySmall {
+	font-family: 'Myriad Pro';
+	font-size: 44px;
+	line-height: 48px;
+	letter-spacing: -0.01em;
 }
 
-.font-size-14 {
-	font-size: 14px;
+/* Heading Styles */
+.heading1 {
+	font-family: 'Myriad Pro';
+	font-size: 40px;
+	line-height: 48px;
+	letter-spacing: -0.01em;
 }
 
-.font-size-16 {
+.heading2 {
+	font-family: 'Myriad Pro';
+	font-size: 36px;
+	line-height: 44px;
+	letter-spacing: -0.01em;
+}
+
+.heading3 {
+	font-family: 'Myriad Pro';
+	font-size: 32px;
+	line-height: 40px;
+	letter-spacing: -0.01em;
+}
+
+.heading4 {
+	font-family: 'Myriad Pro';
+	font-size: 28px;
+	line-height: 36px;
+}
+
+.heading5 {
+	font-family: 'Myriad Pro';
+	font-size: 24px;
+	line-height: 32px;
+}
+
+.heading6 {
+	font-family: 'Myriad Pro';
+	font-size: 20px;
+	line-height: 28px;
+}
+
+.heading7 {
+	font-family: 'Myriad Pro';
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.heading8 {
+	font-family: 'Myriad Pro';
 	font-size: 16px;
+	line-height: 22px;
 }
 
-.line-height-130 {
-	line-height: 130%;
+.heading9 {
+	font-family: 'Myriad Pro';
+	font-size: 14px;
+	line-height: 20px;
 }
 
-.line-height-150 {
-	line-height: 150%;
+.heading10 {
+	font-family: 'Myriad Pro';
+	font-size: 12px;
+	line-height: 18px;
 }
 
-.font-family-default {
-	font-family: Arial, sans-serif;
+/* Subtitle Styles */
+.subtitle1 {
+	font-family: 'VisueltPro';
+	font-size: 28px;
+	line-height: 36px;
 }
 
-.font-family-custom {
-	font-family: 'YourCustomFont', sans-serif;
+.subtitle2 {
+	font-family: 'VisueltPro';
+	font-size: 24px;
+	line-height: 32px;
 }
 
-.color-default {
-	color: black;
+.subtitle3 {
+	font-family: 'VisueltPro';
+	font-size: 20px;
+	line-height: 28px;
 }
 
-.color-primary {
-	color: #333;
+.subtitle4 {
+	font-family: 'VisueltPro';
+	font-size: 16px;
+	line-height: 24px;
 }
 
-.padding-0 {
-	padding: 0;
+/* Body Styles */
+.body1 {
+	font-family: 'VisueltPro';
+	font-size: 28px;
+	line-height: 36px;
 }
 
-.padding-10 {
-	padding: 10px;
+.body2 {
+	font-family: 'VisueltPro';
+	font-size: 24px;
+	line-height: 32px;
 }
 
-.margin-0 {
-	margin: 0;
+.body3 {
+	font-family: 'VisueltPro';
+	font-size: 20px;
+	line-height: 28px;
 }
 
-.margin-10 {
-	margin: 10px;
+.body4 {
+	font-family: 'VisueltPro';
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.body5 {
+	font-family: 'VisueltPro';
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.body6 {
+	font-family: 'VisueltPro';
+	font-size: 12px;
+	line-height: 16px;
+}
+
+/* Caption Styles */
+.caption1 {
+	font-family: 'VisueltPro';
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.caption2 {
+	font-family: 'VisueltPro';
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.caption3 {
+	font-family: 'VisueltPro';
+	font-size: 12px;
+	line-height: 16px;
+}
+
+/* Button Styles */
+.button1 {
+	font-family: 'VisueltPro';
+	font-size: 28px;
+	line-height: 36px;
+}
+
+.button2 {
+	font-family: 'VisueltPro';
+	font-size: 24px;
+	line-height: 32px;
+}
+
+.button3 {
+	font-family: 'VisueltPro';
+	font-size: 20px;
+	line-height: 28px;
+}
+
+.button4 {
+	font-family: 'VisueltPro';
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.button5 {
+	font-family: 'VisueltPro';
+	font-size: 14px;
+	line-height: 22px;
+}
+
+/* Paragraph Styles */
+.paragraph1 {
+	font-family: 'VisueltPro';
+	font-size: 24px;
+	line-height: 32px;
+}
+
+.paragraph2 {
+	font-family: 'VisueltPro';
+	font-size: 20px;
+	line-height: 28px;
+}
+
+.paragraph3 {
+	font-family: 'VisueltPro';
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.paragraph4 {
+	font-family: 'VisueltPro';
+	font-size: 14px;
+	line-height: 18px;
 }

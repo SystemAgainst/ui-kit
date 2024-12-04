@@ -1,5 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom'
-import { Accordion, Table, ToggleButtonGroup } from '../components'
+import { Accordion, Breadcrumbs, Table } from '../components'
 import { accordionItems } from '../components/Accordion/mock.data'
 
 const router = createBrowserRouter([
@@ -16,8 +16,8 @@ const router = createBrowserRouter([
 		element: <Table />,
 	},
 	{
-		path: '/toggle-button',
-		element: <ToggleButtonGroup />,
+		path: '/breadcrumbs',
+		element: <Breadcrumbs />,
 	},
 ])
 

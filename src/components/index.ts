@@ -1,5 +1,5 @@
 export { default as Accordion } from './Accordion'
+export { default as Breadcrumbs } from './Breadcrumbs'
 export { default as Sidebar } from './Sidebar'
 export { default as Table } from './Table'
-export { default as Typography } from './Typography2'
-export { default as ToggleButtonGroup } from './ToggleButtonGroup'
+export { default as Typography } from './Typography'
