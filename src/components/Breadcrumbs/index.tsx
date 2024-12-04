@@ -1,25 +1,31 @@
 import cn from 'classnames'
-import { Fragment, MouseEvent } from 'react'
+import { Fragment, MouseEventHandler } from 'react'
 import { Link } from 'react-router-dom'
 import { Typography } from '../index'
 import styles from './style.module.css'
 import { BreadcrumbsPropsType } from './types'
 
 const Breadcrumbs = ({ ...props }: BreadcrumbsPropsType) => {
-	const { items = [], maxItems, className, style, children, separator = '/' } = props
+	const { items = [], maxItems, className, style, separator = '/' } = props
 
-	const handleOnClick = (event: MouseEvent<HTMLDivElement, MouseEvent>) => {
+	const handleOnClick: MouseEventHandler<HTMLDivElement> = (event) => {
 		event.preventDefault()
 		alert('You clicked a breadcrumb.')
 	}
 
 	const ellipsis = <span className={styles.ellipsis}>...</span>
 
-	const visibleBreadcrumbs = (maxItems && items.length > maxItems)
-		? [items[0], { label: ellipsis, href: undefined }, items[items.length - 1]]
-		: items
+	const visibleBreadcrumbs =
+		maxItems && items.length > maxItems
+			? [items[0], { label: ellipsis, href: undefined }, items[items.length - 1]]
+			: items
 
 	const wrapperClass = cn(className, styles.wrapper)
+
+	const getBreadcrumbsLinkClassNames = (index: number) =>
+		cn(styles.link, {
+			[styles.active]: index === visibleBreadcrumbs.length - 1,
+		})
 
 	return (
 		<>
@@ -30,7 +36,11 @@ const Breadcrumbs = ({ ...props }: BreadcrumbsPropsType) => {
 					{visibleBreadcrumbs.map((item, index) => (
 						<Fragment key={`breadcrumbs-${index}`}>
 							{typeof item.label === 'string' ? (
-								<Link className={styles.link} to={item.href || '#'} aria-current={!item.href ? 'page' : undefined}>
+								<Link
+									className={getBreadcrumbsLinkClassNames(index)}
+									to={item.href || '#'}
+									aria-current={!item.href ? 'page' : undefined}
+								>
 									{item.label}
 								</Link>
 							) : (
