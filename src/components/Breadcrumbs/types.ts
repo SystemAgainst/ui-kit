@@ -7,6 +7,7 @@ export type BreadcrumbType = {
 
 export type BreadcrumbsPropsType = {
 	items?: BreadcrumbType[]
+	maxItems?: number // если кол-во данных больше указанного числа, то будет указаны первый элемент, троеточие и последний элемент
 	className?: string
 	children?: ReactNode
 	separator?: ReactNode

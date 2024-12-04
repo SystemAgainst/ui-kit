@@ -20,7 +20,7 @@ const App: React.FC = () => (
 
 			<Route path='/typography' element={<Typography variant='displayLarge'>asdf</Typography>} />
 
-			<Route path='/breadcrumbs' element={<Breadcrumbs items={breadcrumbsData} />} />
+			<Route path='/breadcrumbs' element={<Breadcrumbs maxItems={2} items={breadcrumbsData} />} />
 		</Routes>
 	</BasicLayout>
 )

@@ -12,3 +12,8 @@
 	margin: 0 5px;
 	color: #666;
 }
+
+.ellipsis {
+	color: #666;
+	cursor: default;
+}
