@@ -5,6 +5,7 @@ import { accordionItems } from './components/Accordion/mock.data'
 import MockData from './components/Table/data/mock.data'
 import styles from './components/Table/style/style.module.css'
 import BasicLayout from './layouts/BasicLayout'
+import { breadcrumbsData } from './components/Breadcrumbs/breadcrumbs.data'
 
 const App: React.FC = () => (
 	<BasicLayout>
@@ -19,7 +20,7 @@ const App: React.FC = () => (
 
 			<Route path='/typography' element={<Typography variant='displayLarge'>asdf</Typography>} />
 
-			<Route path='/breadcrumbs' element={<Breadcrumbs />} />
+			<Route path='/breadcrumbs' element={<Breadcrumbs items={breadcrumbsData} />} />
 		</Routes>
 	</BasicLayout>
 )
