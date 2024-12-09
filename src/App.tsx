@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import { Accordion, Breadcrumbs, Table, Typography } from './components'
+import { Accordion, Breadcrumbs, Carousel, Table, Typography } from './components'
 import { accordionItems } from './components/Accordion/mock.data'
 import MockData from './components/Table/data/mock.data'
 import styles from './components/Table/style/style.module.css'
@@ -21,6 +21,8 @@ const App: React.FC = () => (
 			<Route path='/typography' element={<Typography variant='displayLarge'>asdf</Typography>} />
 
 			<Route path='/breadcrumbs' element={<Breadcrumbs maxItems={2} items={breadcrumbsData} />} />
+
+			<Route path='/carousel' element={<Carousel />} />
 		</Routes>
 	</BasicLayout>
 )

@@ -17,6 +17,9 @@ const Sidebar: React.FC = () => {
 				<li>
 					<Link to='/breadcrumbs'>Breadcrumbs</Link>
 				</li>
+				<li>
+					<Link to='/carousel'>Carousel</Link>
+				</li>
 			</ul>
 		</nav>
 	)

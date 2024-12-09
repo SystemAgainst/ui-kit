@@ -1,5 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom'
-import { Accordion, Breadcrumbs, Table } from '../components'
+import { Accordion, Breadcrumbs, Carousel, Table } from '../components'
 import { accordionItems } from '../components/Accordion/mock.data'
 
 const router = createBrowserRouter([
@@ -18,6 +18,10 @@ const router = createBrowserRouter([
 	{
 		path: '/breadcrumbs',
 		element: <Breadcrumbs />,
+	},
+	{
+		path: '/carousel',
+		element: <Carousel />,
 	},
 ])
 
