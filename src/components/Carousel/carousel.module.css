@@ -1,0 +1,64 @@
+.carouselWrapper {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	overflow: visible; /* Обертка позволяет кнопкам быть видимыми */
+}
+
+.carousel {
+	position: relative;
+	display: flex;
+	align-items: center;
+	overflow: hidden; /* Скрывем контент, выходящий за пределы карусели */
+	width: 80%;
+	/* padding: 2rem; */
+}
+
+.carouselContent {
+	display: flex;
+	gap: var(--card-gap, 16px);
+	transition: transform 0.3s ease-in-out;
+	width: calc(100% + var(--card-gap, 16px));
+}
+
+.carouselItem {
+	flex-shrink: 0;
+	width: calc(100% / var(--visible-items, 1) - var(--card-gap, 16px) / var(--visible-items, 1));
+	transition: transform 0.3s ease-in-out;
+}
+
+.carouselButton {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: #000;
+	border: none;
+	border-radius: 50%;
+	color: #fff;
+	font-size: 1.5rem;
+	width: 48px;
+	height: 48px;
+	cursor: pointer;
+	z-index: 10;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.previousButton {
+	left: 0; /* Теперь привязка идет к обертке */
+	margin-right: 16px; /* Расстояние от карусели */
+}
+
+.nextButton {
+	right: 0; /* Привязка к правому краю обертки */
+	margin-left: 16px; /* Расстояние от карусели */
+}
+
+.carouselButton:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
