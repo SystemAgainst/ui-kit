@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import styles from './carousel.module.css'
 
 type CarouselProps = {
-	items: React.ReactNode[] // Массив элементов карусели
-	showArrows?: boolean // Отображать ли стрелки
+	items: React.ReactNode[]
+	showArrows?: boolean
 	visibleItems?: number
 }
 
@@ -15,12 +15,10 @@ const Carousel = (props: CarouselProps) => {
 	const totalItems = items.length
 	const maxIndex = Math.max(totalItems - visibleItems, 0)
 
-	const goToNext = () => {
-		setActiveIndex((prevIndex) => Math.min(prevIndex + 1, maxIndex))
-	}
-
-	const goToPrevious = () => {
-		setActiveIndex((prevIndex) => Math.max(prevIndex - 1, 0))
+	const changeIndex = (direction: 'next' | 'prev') => {
+		setActiveIndex((prevIndex) =>
+			direction === 'next' ? Math.min(prevIndex + 1, maxIndex) : Math.max(prevIndex - 1, 0),
+		)
 	}
 
 	return (
@@ -29,14 +27,14 @@ const Carousel = (props: CarouselProps) => {
 				<>
 					<button
 						className={`${styles.carouselButton} ${styles.previousButton}`}
-						onClick={goToPrevious}
+						onClick={() => changeIndex('prev')}
 						disabled={activeIndex === 0}
 					>
 						&lt;
 					</button>
 					<button
 						className={`${styles.carouselButton} ${styles.nextButton}`}
-						onClick={goToNext}
+						onClick={() => changeIndex('next')}
 						disabled={activeIndex === maxIndex}
 					>
 						&gt;

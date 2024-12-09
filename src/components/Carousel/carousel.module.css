@@ -11,9 +11,8 @@
 	position: relative;
 	display: flex;
 	align-items: center;
-	overflow: hidden; /* Скрывем контент, выходящий за пределы карусели */
+	overflow: hidden; /* Скрывает контент, выходящий за пределы карусели */
 	width: 80%;
-	/* padding: 2rem; */
 }
 
 .carouselContent {
@@ -49,12 +48,12 @@
 }
 
 .previousButton {
-	left: 0; /* Теперь привязка идет к обертке */
+	left: 0;
 	margin-right: 16px; /* Расстояние от карусели */
 }
 
 .nextButton {
-	right: 0; /* Привязка к правому краю обертки */
+	right: 0;
 	margin-left: 16px; /* Расстояние от карусели */
 }
 
