@@ -21,6 +21,13 @@ const Carousel = (props: CarouselProps) => {
 		)
 	}
 
+	const getCarouselStyles = (activeIndex: number, visibleItems: number): React.CSSProperties =>
+		({
+			transform: `translateX(-${(activeIndex * 100) / visibleItems}%)`,
+			'--visible-items': visibleItems.toString(),
+			'--card-gap': '16px',
+		} as React.CSSProperties)
+
 	return (
 		<div className={styles.carouselWrapper}>
 			{showArrows && (
@@ -42,13 +49,9 @@ const Carousel = (props: CarouselProps) => {
 				</>
 			)}
 			<div className={styles.carousel}>
-				<div
-					className={styles.carouselContent}
-					style={{
-						transform: `translateX(-${(activeIndex * 100) / visibleItems}%)`,
-						'--visible-items': visibleItems.toString(),
-						'--card-gap': '16px',
-					}}
+				<div 
+					className={styles.carouselContent} 
+					style={getCarouselStyles(activeIndex, visibleItems)}
 				>
 					{items.map((item, index) => (
 						<div key={index} className={styles.carouselItem}>
